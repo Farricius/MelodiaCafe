@@ -14,21 +14,28 @@
   <div class="container">
     <div class="item item-1"><span>📻</span>
       <div id="player"></div>
-      <button class="audio-play" id="lofi">😴 Lofi Hip-Hop Radio</button>
-      <button class="audio-play" id="techno">🤖 Synth & Techno Radio</button>
-      <button class="audio-play" id="rock">🎸 Rock & Roll Radio</button>
-      <button class="audio-play" id="merlina">🖤 Dark Academia Radio</button>
-      <button class="audio-play" id="latino">🌴 Latino Music Mix Radio</button>
-      <button class="audio-play" id="medieval">🏰 Medieval Tavern Radio</button>
+      <button class="audio-play" id="lofi"> 😴 Lofi Hip-Hop Radio</button>
+      <button class="audio-play" id="techno"> 🤖 Synthwave Radio</button>
+      <button class="audio-play" id="rock"> 🎸 Rock & Roll Radio</button>
+      <button class="audio-play" id="merlina"> 🖤 Dark Academia Radio</button>
+      <button class="audio-play" id="latino"> 🌴 Latino Music Mix Radio</button>
+      <button class="audio-play" id="medieval"> 🏰 Medieval Tavern Radio</button>
+      <button class="audio-play" id="battle"> 🐲 Epic Battles Radio</button>
     </div>
-    <div class="item item-2"><span>📕</span>
-      <!-- ITEM 2 HERE - LISTA -->
-      <div></div>
 
+    <div class="item item-2"><span>📕</span><br>
+      <!-- ITEM 2 HERE - LISTA -->
+      <div class="row">
+        <input type="text" id="input-box" placeholder="Write a new task...">
+        <button id="addTask">ADD</button>
+        <ul id="list-container">
+        </ul>
+      </div>
     </div>
+
+
     <div class="item item-3">Sound List Sections</div>
   </div>
-
   <div id="app"></div>
 
   <script type="module" src="/main.js"></script>

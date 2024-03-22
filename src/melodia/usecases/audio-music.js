@@ -9,6 +9,7 @@ const musicGenresList = {
   merlina: { id: "YKPhbqjsL4s", name: "🖤 Dark Academia Radio" },
   latino: { id: "fO2TvUIIIqo", name: "🌴 Latino Music Mix Radio" },
   medieval: { id: "vK5VwVyxkbI", name: "🏰 Medieval Tavern Radio" },
+  battle: { id: "AXH5hVVYe28", name: "🐲 Epic Batttles Radio" },
 };
 
 export function onYouTubeIframeAPIReady() {
@@ -36,11 +37,16 @@ function onPlayerReady(event) {
     toggleButton.addEventListener("click", function (event) {
       const buttonId = event.target.id;
       const clickedButton = event.currentTarget;
-      clickedButton.textContent = "Loading radio...";
 
-      // Importante poner falso al clicked para una futura pausa
+      if (player.getPlayerState() === 1) {
+        clickedButton.textContent = "Turning off radio...";
+      } else {
+        clickedButton.textContent = "Loading radio...";
+      }
+
+      // Importante los disabled para una futura pausa
       toggleButtons.forEach((button) => {
-        button.disabled = button === clickedButton ? false : true;
+        button.disabled = button;
       });
 
       setTimeout(() => {
@@ -58,6 +64,7 @@ function onPlayerReady(event) {
           player.loadVideoById(videoId);
           player.playVideo();
           clickedButton.textContent = "Pause Radio";
+          clickedButton.disabled = false;
           console.log("#2 - Radio sound is working");
         }
       }, 2000);

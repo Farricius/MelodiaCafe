@@ -56,7 +56,7 @@ body {
   flex-grow: 0.5;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
   /* 50% */
 }
@@ -72,7 +72,10 @@ body {
 
 .audio-play {
   width: 50%;
+  font-size: 1rem;
   padding: 10px;
+  border-radius: 20px;
+  border-style: none;
 }
 
 #merlina {
@@ -82,4 +85,13 @@ body {
 
 #player {
   display: none;
+}
+
+/* STYLE TEST - FIX */
+input {
+  width: 70%;
+  border: solid black 2px;
+  outline: none;
+  padding: 10px;
+  font-size: 1.25rem;
 }

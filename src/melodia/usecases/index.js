@@ -1,4 +1,5 @@
-import { onYouTubeIframeAPIReady } from "./usecases/audio-music";
+import { onYouTubeIframeAPIReady } from "./audio-music";
+export { addNewTask } from "./add-task.js";
 
 // Evita el error de los vídeos y el script
 function loadYouTubeAPI() {
