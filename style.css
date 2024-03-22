@@ -13,6 +13,32 @@ body {
   height: 90vh;
 }
 
+.audio-play {
+  width: 75%;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 20px;
+  border-style: none;
+}
+
+
+.item {
+  background: grey;
+}
+
+.item-1 {
+  flex-grow: 0.2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.item-1>span {
+  font-size: 3rem;
+}
+
+
 @media only screen and (max-width: 800px) {
   body {
     background-color: lightblue;
@@ -31,25 +57,16 @@ body {
   }
 
   .audio-play {
-    margin-bottom: 10px;
-    max-width: 100%;
+    margin-bottom: 20px;
+    background-color: whitesmoke;
+    width: 75%;
   }
-}
 
-.item {
-  background: grey;
-}
+  .item-1>span {
+    font-size: 2.50rem;
+    margin-bottom: 2rem;
+  }
 
-.item-1 {
-  flex-grow: 0.2;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.item-1>span {
-  font-size: 3rem;
 }
 
 .item-2 {
@@ -70,13 +87,7 @@ body {
   /* 30% */
 }
 
-.audio-play {
-  width: 50%;
-  font-size: 1rem;
-  padding: 10px;
-  border-radius: 20px;
-  border-style: none;
-}
+
 
 #merlina {
   /* background-image: url("https://media.tenor.com/S0uzXjSJS9kAAAAj/wednesday-dance-addams-dance.gif");
