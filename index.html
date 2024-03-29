@@ -5,41 +5,52 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite App</title>
-  <link rel="stylesheet" href="style.css" type="text/css" />
-
+  <title>Melodía Agenda App</title>
+  <!-- <link rel="stylesheet" href="style.css" type="text/css" /> -->
 </head>
 
 <body>
   <div class="container">
-    <div class="item item-1"><span>📻</span>
+    <div class="item item-1">
+      <span>📻</span>
       <div id="player"></div>
       <button class="audio-play" id="lofi"> 😴 Lofi Hip-Hop Radio</button>
       <button class="audio-play" id="techno"> 🤖 Synthwave Radio</button>
       <button class="audio-play" id="rock"> 🎸 Rock & Roll Radio</button>
       <button class="audio-play" id="merlina"> 🖤 Dark Academia Radio</button>
-      <button class="audio-play" id="latino"> 🌴 Latino Music Mix Radio</button>
+      <button class="audio-play" id="latino"> 🌴 Latino Mix Radio</button>
       <button class="audio-play" id="medieval"> 🏰 Medieval Tavern Radio</button>
-      <button class="audio-play" id="battle"> 🐲 Epic Battles Radio</button>
+      <button class="audio-play" id="battle"> 🐲 Epic & Fantasy Radio</button>
+      <input type="range" id="volumeControl" min="0" max="100" value="75">
     </div>
 
-    <div class="item item-2"><span>📕</span><br>
-      <!-- ITEM 2 HERE - LISTA -->
-      <div class="row">
-        <input type="text" id="input-box" placeholder="Write a new task...">
+    <div class="item item-2">
+      <span>☕</span>
+      <div class="input-row">
+        <input type="text" id="input-box" maxlength=50 placeholder="Write a new task...">
         <button id="addTask">ADD</button>
-        <ul id="list-container">
-        </ul>
+      </div>
+      <div class="list">
+        <ul id="list-container"></ul>
       </div>
     </div>
 
-
-    <div class="item item-3">Sound List Sections</div>
+    <div class="item item-3">
+      <span>🔊</span>
+      <div class="sliders-group">
+        <label>Ambiente 1</label>
+        <input type="range">
+        <label>Ambiente 2</label>
+        <input type="range">
+        <label>Ambiente 3</label>
+        <input type="range">
+        <label>Ambiente 4</label>
+        <input type="range">
+      </div>
+    </div>
   </div>
-  <div id="app"></div>
 
   <script type="module" src="/main.js"></script>
-
 </body>
 
 </html>

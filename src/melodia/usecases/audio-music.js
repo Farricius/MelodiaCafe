@@ -1,5 +1,4 @@
-// audio-music.js
-
+// Necesaria para el reproductor falso
 let player;
 
 const musicGenresList = {
@@ -32,6 +31,13 @@ export function onYouTubeIframeAPIReady() {
 
 function onPlayerReady(event) {
   const toggleButtons = document.querySelectorAll(".audio-play");
+
+  const volumeControl = document.getElementById("volumeControl");
+  volumeControl.addEventListener("input", function () {
+    player.setVolume(volumeControl.value);
+    const value = this.value;
+    this.style.background = `linear-gradient(to right, #82CFD0 0%, #82CFD0 ${value}%, #fff ${value}%, white 100%)`;
+  });
 
   toggleButtons.forEach((toggleButton) => {
     toggleButton.addEventListener("click", function (event) {
