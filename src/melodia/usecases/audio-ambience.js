@@ -27,12 +27,10 @@ export function toggleAmbienceAudio(id, button) {
   const pauseIcon = "⏸";
 
   if (audio.paused) {
-    setVolume(id, 25);
     audio.play();
     button.innerHTML = button.innerHTML.replace(playIcon, pauseIcon);
   } else {
     audio.pause();
-    setVolume(id, 25);
     button.innerHTML = button.innerHTML.replace(pauseIcon, playIcon);
   }
 }
