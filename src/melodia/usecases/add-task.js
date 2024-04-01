@@ -26,7 +26,7 @@ export const addNewTask = () => {
   saveTasks();
 };
 
-// Working OK, crea tarea al cliente para muestra
+// Working OK, crea tarea al cliente para que vea como usar app
 document.addEventListener("DOMContentLoaded", function () {
   setTimeout(function () {
     if (list.children.length === 0) createExampleTaskIfEmpty();
@@ -54,13 +54,10 @@ function showTasks() {
   }
 }
 
-window.addEventListener("load", showTasks);
-
 function handleKeyPress(event) {
-  if (event.key === "Enter") {
-    addNewTask();
-  }
+  if (event.key === "Enter") addNewTask();
 }
 
 inputBox.addEventListener("keypress", handleKeyPress);
 button.addEventListener("click", addNewTask);
+window.addEventListener("load", showTasks);

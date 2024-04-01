@@ -15,18 +15,20 @@ body {
   height: 90vh;
 }
 
+/* ITEM 1 FIX */
+
 .audio-play {
   width: 90%;
   font-size: 1rem;
   padding: 10px;
   border-radius: 5px;
   background-color: white;
-  border: 1px solid black;
+  border: solid black 1px;
 }
 
 :disabled {
   background-color: whitesmoke;
-  border-color: solid 4px black;
+  border: solid grey 1px;
 }
 
 #player {
@@ -50,6 +52,8 @@ span {
   font-size: 3rem;
 }
 
+/* ITEM 2 FIX */
+
 .item-2>span {
   margin-top: 3rem;
 }
@@ -57,7 +61,7 @@ span {
 #volumeControl {
   width: 70%;
   cursor: pointer;
-  border: solid black 2px;
+  border: solid black 1px;
   outline: none;
   padding: 10px;
   font-size: 1.25rem;
@@ -78,13 +82,13 @@ span {
 
 .item-2 {
   /* background-color: #e1daca; */
-  flex-grow: 0.6;
+  flex-grow: 0.7;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-image: url('dist/assets/waiter2.png');
+  background-image: url('public/assets/waiter2.png');
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: 500px;
@@ -148,8 +152,6 @@ ul {
   text-overflow: ellipsis;
   list-style-type: none;
 }
-
-/* TEST 2  */
 
 ul {
   width: auto;
@@ -215,8 +217,8 @@ li:hover span {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 2.50rem;
-  flex-grow: 0.2;
+  margin-top: 2.75rem;
+  flex-grow: 0.1;
 }
 
 .sliders-group {
@@ -227,29 +229,69 @@ li:hover span {
   margin-bottom: 2rem;
   width: 90%;
   font-size: 1rem;
+  padding: 5px;
+
+}
+
+.slider-container {
+  width: 100%;
+}
+
+.play-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+  color: inherit;
+  padding: 0;
+}
+
+.play-icon {
+  margin: 0px 10px 0px 10px;
   padding: 10px;
-  border-radius: 5px;
-  background-color: white;
-  border: 1px solid black;
+  font-size: 1.5rem;
 }
 
 label {
   text-align: left;
-  width: 100%;
+  width: 50%;
   margin-top: 5px;
+  margin-left: 5px;
 }
 
 .sliders-group input {
-  width: 100%;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+  width: 90%;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  cursor: pointer;
+  border: solid black 1px;
+  outline: none;
+  padding: 1px;
+  font-size: 1.25rem;
+  background: linear-gradient(to right, rgb(130, 207, 208) 0%, rgb(130, 207, 208) 25%, rgb(255, 255, 255) 15%, white 100%);
+  border-radius: 10px;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
-@media only screen and (max-width: 1024px) {
-  body {
-    background-color: lightblue;
-  }
+.sliders-group input::-webkit-slider-thumb {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: black;
+  -webkit-appearance: none;
+  appearance: none;
+}
 
+code {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.75rem;
+}
+
+/* MEDIA QUERY FOR FLEX-COLUMN & IMAGE FIX */
+
+@media only screen and (max-width: 1024px) {
   .container {
     display: flex;
     flex-direction: column;
@@ -263,14 +305,11 @@ label {
   }
 
   .item-2 {
-    /* background: whitesmoke; */
-    background-color: whitesmoke;
     background-image: none;
   }
 
   .audio-play {
     margin-bottom: 20px;
-    background-color: grey;
     width: 75%;
   }
 

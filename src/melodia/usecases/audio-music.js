@@ -6,9 +6,9 @@ const musicGenresList = {
   techno: { id: "4xDzrJKXOOY", name: "🤖 Synth & Techno Radio" },
   rock: { id: "XnUNOaxw6bs", name: "🎸 Rock & Roll Radio" },
   merlina: { id: "YKPhbqjsL4s", name: "🖤 Dark Academia Radio" },
-  latino: { id: "fO2TvUIIIqo", name: "🌴 Latino Music Mix Radio" },
+  latino: { id: "fO2TvUIIIqo", name: "🌴 Latino Mix Radio" },
   medieval: { id: "vK5VwVyxkbI", name: "🏰 Medieval Tavern Radio" },
-  battle: { id: "AXH5hVVYe28", name: "🐲 Epic Batttles Radio" },
+  battle: { id: "AXH5hVVYe28", name: "🐲 Epic & Fantasy Radio" },
 };
 
 export function onYouTubeIframeAPIReady() {
@@ -31,7 +31,6 @@ export function onYouTubeIframeAPIReady() {
 
 function onPlayerReady(event) {
   const toggleButtons = document.querySelectorAll(".audio-play");
-
   const volumeControl = document.getElementById("volumeControl");
   volumeControl.addEventListener("input", function () {
     player.setVolume(volumeControl.value);
@@ -50,13 +49,13 @@ function onPlayerReady(event) {
         clickedButton.textContent = "Loading radio...";
       }
 
-      // Importante los disabled para una futura pausa
+      // Importante disabled para una futura pausa y bloquear mientras
       toggleButtons.forEach((button) => {
         button.disabled = button;
       });
 
       setTimeout(() => {
-        // Radio está apagada
+        // Radio está apagada:
         if (player.getPlayerState() === 1) {
           player.pauseVideo();
           console.log("#1 - Radio sound has stopped");
@@ -65,7 +64,7 @@ function onPlayerReady(event) {
             button.disabled = false;
           });
         } else {
-          // Radio está sonando
+          // Radio está sonando:
           const videoId = musicGenresList[buttonId].id;
           player.loadVideoById(videoId);
           player.playVideo();

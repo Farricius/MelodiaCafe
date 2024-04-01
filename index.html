@@ -5,8 +5,12 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Melodía Agenda App</title>
-  <!-- <link rel="stylesheet" href="style.css" type="text/css" /> -->
+  <title>☕ Melodía Café </title>
+  <audio id="bar-audio" src="public/assets/bar-audio.mp3" loop></audio>
+  <audio id="street-audio" src="public/assets/street-audio.mp3" loop></audio>
+  <audio id="rain-audio" src="public/assets/rain-audio.mp3" loop></audio>
+  <audio id="sunny-audio" src="public/assets/sunny-audio.mp3" loop></audio>
+  <audio id="fireplace-audio" src="public/assets/fireplace-audio.mp3" loop></audio>
 </head>
 
 <body>
@@ -27,7 +31,7 @@
     <div class="item item-2">
       <span>☕</span>
       <div class="input-row">
-        <input type="text" id="input-box" maxlength=50 placeholder="Write a new task...">
+        <input type="text" id="input-box" maxlength="50" placeholder="Write a new task...">
         <button id="addTask">ADD</button>
       </div>
       <div class="list">
@@ -38,15 +42,28 @@
     <div class="item item-3">
       <span>🔊</span>
       <div class="sliders-group">
-        <label>Ambiente #1</label>
-        <input type="range">
-        <label>Ambiente #2</label>
-        <input type="range">
-        <label>Ambiente #3</label>
-        <input type="range">
-        <label>Ambiente #4</label>
-        <input type="range">
+        <div class="slider-container">
+          <button class="play-button" data-id="bar-audio">▶️ Bar People</button>
+          <input type="range" min="0" max="100" value="25" data-id="bar-audio">
+        </div>
+        <div class="slider-container">
+          <button class="play-button" data-id="street-audio">▶️ Street Noise</button>
+          <input type="range" min="0" max="100" value="25" data-id="street-audio">
+        </div>
+        <div class="slider-container">
+          <button class="play-button" data-id="rain-audio">▶️ Rainy Day</button>
+          <input type="range" min="0" max="100" value="25" data-id="rain-audio">
+        </div>
+        <div class="slider-container">
+          <button class="play-button" data-id="sunny-audio">▶️ Sunny Day</button>
+          <input type="range" min="0" max="100" value="25" data-id="sunny-audio">
+        </div>
+        <div class="slider-container">
+          <button class="play-button" data-id="fireplace-audio">▶️ Fireplace Sound</button>
+          <input type="range" min="0" max="100" value="25" data-id="fireplace-audio">
+        </div>
       </div>
+      <code>Melodía Café developed by <a href="https://josedavidhernandez.com">JD Hernández</a></code>
     </div>
   </div>
 
