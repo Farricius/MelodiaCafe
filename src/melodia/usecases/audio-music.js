@@ -4,9 +4,9 @@ let player;
 const musicGenresList = {
   lofi: { id: "jfKfPfyJRdk", name: "😴 Lofi Hip-Hop Radio" },
   techno: { id: "4xDzrJKXOOY", name: "🤖 Synth & Techno Radio" },
-  rock: { id: "XnUNOaxw6bs", name: "🎸 Rock & Roll Radio" },
-  merlina: { id: "YKPhbqjsL4s", name: "🖤 Dark Academia Radio" },
-  latino: { id: "fO2TvUIIIqo", name: "🌴 Latino Mix Radio" },
+  rock: { id: "Nq_6zyW6x3E", name: "🎸 Rock & Roll Radio" },
+  merlina: { id: "mPhl23eo69g", name: "🖤 Dark Academia Radio" },
+  latino: { id: "8wNpMhXnYPk", name: "🌴 Latino Mix Radio" },
   medieval: { id: "vK5VwVyxkbI", name: "🏰 Medieval Tavern Radio" },
   battle: { id: "AXH5hVVYe28", name: "🐲 Epic & Fantasy Radio" },
 };
