@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const rangeInputs = document.querySelectorAll('input[type="range"]');
 
   // Listeners
-
   playButtons.forEach((button) => {
     button.addEventListener("click", function () {
       const audioId = this.dataset.id;
